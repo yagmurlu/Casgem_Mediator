@@ -1,0 +1,39 @@
+﻿@model List<Casgem_Mediator.MediatorPattern.Results.GetProductQueryResult>
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br />
+    <br />
+    <a href="/Default/AddProduct/" class="btn btn-success">Ekle</a>
+    <br />
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Ürün</th>
+            <th>Marka</th>
+            <th>Kategori</th>
+            <th>Stok</th>
+            <th>Fiyat</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductId</td>
+                <td>@item.Name</td>
+                <td>@item.Brand</td>
+                <td>@item.Category</td>
+                <td>@item.Stock</td>
+                <td>@item.Price</td>
+                <td><a href="/Default/DeleteProduct/@item.ProductId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Default/EditProduct/@item.ProductId" class="btn btn-primary">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+</div>
