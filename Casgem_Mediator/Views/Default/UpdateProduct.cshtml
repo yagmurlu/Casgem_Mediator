@@ -1,0 +1,28 @@
+﻿@model Casgem_Mediator.MediatorPattern.Results.GetProductUpdateByIdQueryResult
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <form method="post">
+        <label>Ürün Adı</label>
+        <input type="text" class="form-control" asp-for="Name" />
+        <br />
+        <label>Ürün Marka</label>
+        <input type="text" class="form-control" asp-for="Brand" />
+        <br />
+        <label>Ürün Stok</label>
+        <input type="text" class="form-control" asp-for="Stock" />
+        <br />
+        <label>Ürün Fiyat</label>
+        <input type="text" class="form-control" asp-for="Price" />
+        <br />
+        <label>Ürün Kategori</label>
+        <input type="text" class="form-control" asp-for="Category" />
+        <br />
+
+        <input type="hidden" asp-for="ProductId" />
+        <button class="btn btn-success">Ürün Güncelle</button>
+    </form>
+</div>
